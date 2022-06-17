@@ -12,7 +12,7 @@ const splitbill = mongoose.Schema({
     expenseType:{
         type: String,
         enum: ["EXACT", "PERCENT", "EQUAL"],
-        default: "EQUAL"
+        default: "PERCENT"
     },
     paidBy:{
         type: mongoose.Schema.ObjectId,
@@ -30,7 +30,7 @@ const splitbill = mongoose.Schema({
         }
     ],
 
-    sharingStructure:{}
+    sharingPercent:{}
 })
 
 

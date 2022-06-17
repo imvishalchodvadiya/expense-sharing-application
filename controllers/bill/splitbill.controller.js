@@ -13,18 +13,13 @@ const split = async (req, res) => {
     var expenses = [];
     var flag = 0;
     const newSplitBill = new Splitbill(req.body);
-    const group = await Group.findById(req.body.gid);
-    console.log(group);
-    if (!group.members.includes(req.body.paidBy))
-        return res.status(STATUS_CODE.BAD_REQUEST).send({
-            message: "Invalid group!!"
-        });
+    const group = await Group.findById(req.body.groupId);
 
-
-    if (req.body.sharedBy.length == 0)
+    if (!group.members.includes(req.body.paidId)) {
         return res.status(STATUS_CODE.BAD_REQUEST).send({
-            message: "No Members in group!!"
+            message: "Paid by id required."
         });
+    }   
 
     for (let i = 0; i < req.body.sharedBy.length; i++) {
         if (!group.members.includes(req.body.sharedBy[i]))
@@ -44,7 +39,7 @@ const split = async (req, res) => {
 
     if (req.body.expenseType == "PERCENT") {
 
-        let sharingStructure = req.body.sharingStructure;
+        let sharingStructure = req.body.sharingPercent;
         let sharedBy = req.body.sharedBy;
 
         let sum = Object.values(sharingStructure).reduce((a, b) => {

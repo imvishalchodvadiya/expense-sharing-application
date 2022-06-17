@@ -70,7 +70,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"gid\": \"62ac516adffc5317fa1c5007\",\n    \"expenseType\":\"PERCENT\",\n    \"paidBy\":\"620fe487d21329783f6a7a19\",\n    \"amount\":800,\n    \"sharedBy\":[\"62ac493f53e1edca1e1c2a15\", \"62ac494653e1edca1e1c2a17\",\"62ac494b53e1edca1e1c2a19\"],\n    \"sharingStructure\":{\n        \"62ac493f53e1edca1e1c2a15\":410,\n        \"62ac494653e1edca1e1c2a17\":50,\n        \"62ac494b53e1edca1e1c2a19\": 40\n    }\n    \n}",
+					"raw": "{\n    \"gid\": \"62ac516adffc5317fa1c5007\",\n    \"expenseType\":\"PERCENT\",\n    \"paidBy\":\"62ac493f53e1edca1e1c2a15\",\n    \"amount\":10800,\n    \"sharedBy\":[\"62ac493f53e1edca1e1c2a15\", \"62ac494653e1edca1e1c2a17\",\"62ac494b53e1edca1e1c2a19\"],\n    \"sharingPercent\":{\n        \"62ac493f53e1edca1e1c2a15\":10,\n        \"62ac494653e1edca1e1c2a17\":50,\n        \"62ac494b53e1edca1e1c2a19\": 40\n    }\n    \n}",
 					"options": {
 						"raw": {
 							"language": "json"
