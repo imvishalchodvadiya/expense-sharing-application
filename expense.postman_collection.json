@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "9c392a24-6722-49c2-801c-d2bd6c8e63de",
+		"name": "expense",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7046540"
+	},
+	"item": [
+		{
+			"name": "create a new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"vishal@yopmail.com\",\n    \"name\": \"vishal\",\n    \"phone\": \"972403577\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/user/createuser",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"user",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"group1\",\n    \"members\": [\"62ac493f53e1edca1e1c2a15\",\"62ac494653e1edca1e1c2a17\",\"62ac494b53e1edca1e1c2a19\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/group/creategroup/62ac493f53e1edca1e1c2a15\n",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"group",
+						"creategroup",
+						"62ac493f53e1edca1e1c2a15\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "split Bill",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gid\": \"62ac516adffc5317fa1c5007\",\n    \"expenseType\":\"PERCENT\",\n    \"paidBy\":\"620fe487d21329783f6a7a19\",\n    \"amount\":800,\n    \"sharedBy\":[\"62ac493f53e1edca1e1c2a15\", \"62ac494653e1edca1e1c2a17\",\"62ac494b53e1edca1e1c2a19\"],\n    \"sharingStructure\":{\n        \"62ac493f53e1edca1e1c2a15\":410,\n        \"62ac494653e1edca1e1c2a17\":50,\n        \"62ac494b53e1edca1e1c2a19\": 40\n    }\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/splitbill",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"splitbill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll Group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/group/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display expense",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/displayexpense/62ac516adffc5317fa1c5007",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"displayexpense",
+						"62ac516adffc5317fa1c5007"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
