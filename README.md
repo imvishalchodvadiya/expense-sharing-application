@@ -1,11 +1,15 @@
-1. Install NPM
+## Installation
 
-npm i 
+```bash
+$ npm install
+```
 
-2. Go inside the project folder
+## Running the app
 
-3. Run below comman
+```bash
+# development
+$ npm run start
+```
 
-npm run start
+## Run on localhost:4000
 
-your server run on localhost:4000
